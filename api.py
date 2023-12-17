@@ -1,8 +1,8 @@
-from fastapi import FastAPI
+from fastapi import APIRouter
 
-app = FastAPI()
+app = APIRouter()
 
-@app.get("/")
-async def welcome() -> dict:
-    return {"message": "Hello World"}
 
+@app.get("/hello")
+async def say_hello() -> dict:
+    return {"message": "Hello !"}
